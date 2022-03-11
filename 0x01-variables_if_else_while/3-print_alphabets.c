@@ -1,15 +1,22 @@
 #include <stdio.h>
-
-/* printing the alphabet */
+/**
+ * main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
-	char c;
+char alpha;
+char bet;
 
-	for (c = 'a'; c <= 'z'; c++)
-		putchar(c);
-	for (c = 'A'; c <= 'Z'; c++)
-		putchar(c);
-		putchar('\n');
-
-	return (0);
+for (alpha = 'a' ; alpha <= 'z' ; alpha++)
+{
+putchar(alpha);
+}
+for (bet = 'A' ; bet <= 'Z' ; bet++)
+{
+putchar(bet);
+}
+putchar('\n');
+return (0);
 }
