@@ -1,17 +1,15 @@
-#include <stdio.h>
-#include "main.h"
+#include "holberton.h"
 
 /**
- * print_alphabet - Entry point
- *
- * Return: Always 0 (Success)
- */
-
+* print_alphabet - llamar la funcion desde el main
+*/
 void print_alphabet(void)
 {
-int ch = 'a';
-for (ch = 'a'; ch <= 'z'; ch++)
-_putchar(ch);
-_putchar('\n');
-return;
+	char i;
+
+	for (i = 'a'; i <= 'z'; i++)
+	{
+		_putchar(i);
+	}
+	_putchar('\n');
 }
