@@ -1,21 +1,41 @@
-#include <stdio.h>
+#include<stdio.h>
+
 /**
- *main - print first 50 fibonacci
+ * main - first 50 fibonatchi.
  *
- *Return: 0 always.
+ * Return: void.
  */
 int main(void)
 {
-	long int i, x = 1, y = 2, sum = 0;
+	unsigned long int i, i0, i1, j, j0, j1, e, e0, e1, y, k;
 
-	for (i = 0; i < 97; i++)
+	i = 1;
+	j = 2;
+	e = i + j;
+
+	printf("%lu, ", i);
+	printf("%lu, ", j);
+	for (y = 3; y < 89; y++)
 	{
-		printf("%lu, ", x);
-		sum = x + y;
-		x = y;
-		y = sum;
-		if (i == 96)
-			printf("%lu\n", x);
+		printf("%lu, ", e);
+		i = j;
+		j = e;
+		e = i + j;
 	}
+	j0 = j / 1000000000;
+	j1 = j % 1000000000;
+	e0 = e / 1000000000;
+	e1 = e % 1000000000;
+	for (k = 89; k < 98; k++)
+	{
+		printf("%lu%lu, ", e0, e1);
+		i0 = j0;
+		i1 = j1;
+		j0 = e0;
+		j1 = e1;
+		e0 = i0 + j0 + ((i1 + j1) / 1000000000);
+		e1 = (i1 + j1) % 1000000000;
+	}
+printf("%lu%lu\n", e0, e1);
 	return (0);
 }

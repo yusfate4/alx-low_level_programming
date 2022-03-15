@@ -1,55 +1,49 @@
 #include "main.h"
+
 /**
- *print_times_table - n times table.
- *@n: the number defines the table.
- *
- *Return: no return value
+ *print_times_table - print time table.
+ * @n: integer.
+ *Return:void.
  */
 void print_times_table(int n)
 {
-	int i, j, k,product;
-	j = n + 1;
-	for (i = 0; i < j; i++)
+	int i, j, k;
+
+	if (n >= 0 && n <= 15)
 	{
-		for (k = 0; k < j; k++)
+		for (i = 0; i <= n; i++)
 		{
-			if (n > 15)
+			_putchar('0');
+			if (n != 0)
+				_putchar(',');
+			for (j = 1; j <= n; j++)
 			{
-				break;
-			}
-			else
-			{
-				product = i * k;
-				if (k == 0)
-		       		{
-					_putchar('0' + product);
-				}
-				else if (product >= 10)
+				k = i * j;
+				if (k < 10)
 				{
 					_putchar(' ');
-					_putchar('0' + (product / 10));
-					_putchar('0' +  (product % 10));
+					_putchar(' ');
+					_putchar(' ');
+					_putchar('0' + k);
 				}
-				else if (product >= 100)
+				else if (k < 100)
 				{
-	       
-					_putchar('0' + (product / 100));
-					_putchar('0' + ((product / 10) % 10));
-					_putchar('0' + (product % 10));
+					_putchar(' ');
+					_putchar(' ');
+					_putchar((k / 10) + '0');
+					_putchar((k % 10) + '0');
 				}
 				else
 				{
 					_putchar(' ');
-					_putchar(' ');
-					_putchar(product + '0');
+					_putchar((k / 100) + '0');
+					_putchar(((k % 100) / 10) + '0');
+					_putchar(((k % 100) % 10) + '0');
 				}
-				if (k != n)
-				{
+				if (j < n)
 					_putchar(',');
-				}
 			}
+			_putchar('\n');
 		}
-		_putchar('\n');
 	}
 }
-
