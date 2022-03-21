@@ -1,18 +1,18 @@
-#include "holberton.h"
+#include "main.h"
 
 /**
- * _puts - main function.
- * @str: Pointer with the address value.
- * Description: This function takes a pointer to an int as parameter
- * and updates the value it points to to 98.
- *
- * Return: none.
+ * _puts - prints a string
+ * @str: the string
  */
+
 void _puts(char *str)
 {
-	while (*str != '\0')
-	{
-		_putchar(*str++);
-	}
-	_putchar('\n');
+int i = 0;
+
+while (str[i] != '\0')
+{
+_putchar(str[i]);
+i++;
+}
+_putchar('\n');
 }
