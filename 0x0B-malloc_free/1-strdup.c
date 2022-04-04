@@ -1,31 +1,29 @@
-#include <stdio.h>
-#include <stdlib.h>
 #include "main.h"
-
+#include <stdlib.h>
 /**
- * _strdup - copies a sting into a new allocated memory
- * @str: string to copy from
- * Return: a pionter
- */
-
+ * *_strdup - returns a pointer to a newly allocated space with copy of arg
+ * @str: string to copy
+ * Return: pointer to array or null
+ **/
 char *_strdup(char *str)
 {
-int i;
-int j = 0;
-char *ar;
+	char *strDup;
+	int i, j;
 
-if (str == NULL)
-return (NULL);
-
-while (str[j] != '\0')
-j++;
-
-ar = malloc((j + 1) * sizeof(char));
-for (i = 0; i <= j; i++)
-ar[i] = str[i];
-
-if (ar == NULL)
-return (NULL);
-return (ar);
-free(ar);
+	if (str == NULL)
+		return (NULL);
+	i = 0;
+	while (str[i] != '\0')
+		i++;
+	i++;
+	strDup = malloc(sizeof(*str) * i);
+	if (strDup == NULL)
+		return (NULL);
+	j = 0;
+	while (str[j] != '\0')
+	{
+		strDup[j] = str[j];
+		j++;
+	}
+	return (strDup);
 }
