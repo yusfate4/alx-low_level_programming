@@ -1,1 +1,1 @@
-This is a C - Singly linked lists project
+This is a singly-linked-lists projects	
