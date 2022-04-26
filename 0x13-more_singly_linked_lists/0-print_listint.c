@@ -1,7 +1,4 @@
 #include "lists.h"
-#include <stdio.h>
-#include <stdlib.h>
-
 /**
  * print_listint - this function prints all the elements of a list
  * @h: the pointer that points to the struct
