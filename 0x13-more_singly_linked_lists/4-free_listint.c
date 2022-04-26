@@ -17,4 +17,3 @@ void free_listint(listint_t *head)
 		free(ptr);
 	}
 }
-© 2022 GitHub, Inc.
